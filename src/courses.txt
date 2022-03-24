@@ -1,47 +1,45 @@
-Engelsk;0 
-Fremmedspråk;0 
-Geografi;0 
-Historie;0 
-Kroppsøving;0 
-Naturfag;0 
-Norsk;0 
-Religion og etikk;0 
-Samfunnskunnskap;0 
+Engelsk;0
+Fremmedspråk;0
+Geografi;0
+Historie;0
+Kroppsøving;0
+Naturfag;0
+Norsk;0
+Religion og etikk;0
+Samfunnskunnskap;0
 Matematikk R1;0.5
 Matematikk R2;1.0
 Matematikk S1;0.5
 Matematikk S2;0.5
-Matematikk P1;0 
-Matematikk P2;0 
-Antikkens kultur;0 
-Engelsk;0 
-Entreprenørskap og bedriftsutvikling;0 
+Matematikk P1;0
+Matematikk P2;0
+Antikkens kultur;0
+Engelsk;0
+Entreprenørskap og bedriftsutvikling;0
 Fremmedspråk;0
-Historie og filosofi;0 
+Historie og filosofi;0
 Kommunikasjon og kultur;0
-Latin eller gresk;0 
-Markedsføring og ledelse;0 
-Medie- og informasjonskunnskap;0 
-Næringslivsøkonomi;0 
-Politikk og menneskerettigheter;0 
-Psykologi;0 
-Reiseliv og språk;0 
-Rettslære;0 
-Samfunnsgeografi;0 
-Samfunnsøkonomi;0 
-Samisk historie og samfunn;0 
+Latin eller gresk;0
+Markedsføring og ledelse;0
+Medie- og informasjonskunnskap;0
+Næringslivsøkonomi;0
+Politikk og menneskerettigheter;0
+Psykologi;0
+Reiseliv og språk;0
+Rettslære;0
+Samfunnsgeografi;0
+Samfunnsøkonomi;0
+Samisk historie og samfunn;0
 Sosialkunnskap;0
-Sosiologi og sosialantropologi;0 
+Sosiologi og sosialantropologi;0
 Biologi 1;0.5
-Biologi 2; 0.5
+Biologi 2;0.5
 Fysikk 1;0.5 
 Fysikk 2;1.0
 Geofag 1;0.5
 Geofag 2;0.5
-Informasjonsteknologi 1; 0.5 
-Informasjonsteknologi 2; 0.5
-Kjemi 1; 0.5
-Kjemi 2; 0.5
+Informasjonsteknologi 1;0.5
+Informasjonsteknologi 2;0.5
+Kjemi 1;0.5
+Kjemi 2;0.5
 Teknologi og forskningslære;0.5
-
-

@@ -6,7 +6,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
-public class Calculation {
+public class SaveHandler {
 
     private static List<Course> list = new ArrayList<>(); 
     private String courseName;
@@ -16,7 +16,7 @@ public class Calculation {
     static String filename = "courses.txt";
 
     public void getPointsFromFile(String filename) throws FileNotFoundException {
-        Scanner scanner = new Scanner(new File("src/main/java/application/model/courses.txt"));
+        Scanner scanner = new Scanner(new File("src/courses.txt"));
 
         while (scanner.hasNextLine()) {
             String line = scanner.nextLine();
@@ -26,8 +26,6 @@ public class Calculation {
             double coursePointsInt = Double.parseDouble(coursePoints);
             Course course = new Course(courseName, coursePointsInt);
             System.out.println(course.getCourseName() + " " + course.getExtraPoints());
-            list.add(course);
-            
 
             /*
              * /
@@ -78,10 +76,8 @@ public class Calculation {
     }
 
     public static void main(String[] args) throws FileNotFoundException {
-        System.out.println("hei");
-        Calculation display = new Calculation();
+        SaveHandler display = new SaveHandler();
         display.getPointsFromFile("courses.txt");
-        System.out.println(list);
     }
 
 }
