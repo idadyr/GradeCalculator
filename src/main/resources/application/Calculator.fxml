@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane fx:id="rootPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="500.0" style="-fx-background-color: #aa77cc;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.controller.CalculatorController">
+   <children>
+      <Text fill="#344955" layoutX="142.0" layoutY="74.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Kalkulator">
+         <font>
+            <Font name="Calibri Bold" size="50.0" />
+         </font>
+      </Text>
+      <Button layoutX="87.0" layoutY="126.0" mnemonicParsing="false" text="Velg fag" />
+      <ComboBox fx:id="karakterButton" layoutX="246.0" layoutY="126.0" prefWidth="150.0" promptText="karakterer" />
+      <Button layoutX="73.0" layoutY="188.0" mnemonicParsing="false" text="Velg Karakter" />
+      <ComboBox layoutX="246.0" layoutY="188.0" prefWidth="150.0" />
+   </children>
+</AnchorPane>
