@@ -15,6 +15,8 @@ public class SaveHandler {
 
     static String filename = "courses.txt";
 
+    
+
     public void getPointsFromFile(String filename) throws FileNotFoundException {
         Scanner scanner = new Scanner(new File("src/courses.txt"));
 
@@ -67,6 +69,8 @@ public class SaveHandler {
                 "}";
     }
 
+
+
     private int getCoursePoints() {
         return coursePoints;
     }
@@ -79,5 +83,14 @@ public class SaveHandler {
         SaveHandler display = new SaveHandler();
         display.getPointsFromFile("courses.txt");
     }
-
+/*/
+    public static void main(String[] args) {
+        // Create a HashMap object called capitalCities
+        HashMap<String, String> display = new HashMap<String, String>();
+    
+        // Add keys and values (Country, City)
+        display.put(courseName, coursePoints);
+        System.out.println(display);
+      }
+/*/
 }

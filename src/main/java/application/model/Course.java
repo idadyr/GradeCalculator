@@ -1,18 +1,29 @@
 package application.model;
 
+
+
+import application.controller.CalculatorController;
+
 public class Course {
 
-    private String courseName;
-    private int courseGrade;
-    private double extraPoints;
-    static String filename = "courses.txt"; 
+     public Course course()
+        
+        
+        
+
+    } 
 
 
-    public Course(String courseName, double extraPoints){
-        this.courseName = courseName;
-        this.extraPoints = extraPoints;
-    }
-    
+}
+
+
+
+
+
+
+
+
+    /*/
     public Course(String courseName){
         this.courseName = courseName;
     }
@@ -60,7 +71,7 @@ public static void main(String[] args) {
     
         
     }
-        
+/*/        
 }
 
 

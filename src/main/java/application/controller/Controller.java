@@ -1,43 +1,40 @@
 package application.controller;
-import javafx.fxml.FXML;
-import javafx.scene.control.Button;
 
-public class Controller {
-    @FXML
-    private Button loginButton; 
+import java.io.IOException;
 
-    public Controller() {
-        // tom konstruktør foreløpig
+import application.App;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Scene;
+import javafx.stage.Stage;
+
+public abstract class Controller {
+  private Stage stage;
+
+  public Stage getStage() {
+    return stage;
+  }
+
+  public void setStage(Stage stage) {
+    this.stage = stage;
+  }
+
+  public void changeScene(String fxml) {
+    this.changeScene(fxml, null);
+  }
+
+  public void changeScene(String fxml, String title) {
+    
+    FXMLLoader loader = new FXMLLoader(App.class.getResource(fxml));
+    try {
+      this.stage.setScene(new Scene(loader.load()));
+    } catch (IOException e) {
+      e.printStackTrace();
+      return;
     }
-
-    @FXML
-    public void initialize(){
-        loginButton.setOnAction(event -> test());
-
-    }
-
-    public void test() {
-        System.out.println("hei");
-
-    }
-
-    public void handleButtonClick(){
-        System.out.println("");
-    }
-
+    
+    ((Controller) loader.getController()).setStage(this.stage);
+    if (title != null) this.stage.setTitle(title);
+  }
+}
     
 
-    /*/
-
-    for (String string : args) {
-        try{
-            Course course = new Course(courseName, extraPoints)
-        }
-            catch {
-                Course course = new Course(courseName)
-            }
-
-        }
-        /*/
-        
-}

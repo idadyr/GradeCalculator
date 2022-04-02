@@ -13,16 +13,19 @@ import javafx.scene.layout.BorderPane;
 import javafx.scene.text.Text;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.layout.AnchorPane;
+import application.controller.Controller;
 
 public class App extends Application {
 
 	@Override
 	public void start(Stage primaryStage) throws IOException {
-		Parent root = FXMLLoader.load(getClass().getResource("Calculator.fxml"));
-		Scene mainScene = new Scene(root);
-		primaryStage.setTitle("Hjemmeside");
-		primaryStage.setScene(mainScene);
-		primaryStage.show();
+		FXMLLoader loader = new FXMLLoader(getClass().getResource("Ui.fxml"));
+        primaryStage.setTitle("MainMenu");
+        primaryStage.setScene(new Scene(loader.load()));
+        ((Controller) loader.getController()).setStage(primaryStage);
+        primaryStage.show();
+
+		
 
 	}
 
