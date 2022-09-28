@@ -1,74 +1,83 @@
 package application.controller;
-import application.model.SaveHandler;
-import application.model.UserProfile;
+
+import application.model.ReadAndWrite;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
+import javafx.scene.control.Alert.AlertType;
 import javafx.scene.text.Text;
+import javafx.scene.control.Alert;
+
+import java.io.IOException;
+
+import application.model.IWriteToFile;
 
 public class MainMenuController extends Controller {
+
     @FXML
-    private Button loginButton; 
-    @FXML 
-    private Button registerButton; 
+    private Button loginButton, registerButton; 
     @FXML
-    private TextField userNameInput; 
+    private TextField usernameInput; 
     @FXML 
-    Text loggedInUser; 
+    private Text loggedInUser; 
 
 
+    private IWriteToFile userFile = new ReadAndWrite(); 
+    private IWriteToFile latestUsersFile = new ReadAndWrite(); 
     
 
     @FXML
-    public void initialize(){
-        loginButton.setOnAction(event -> test());
-
-/*/
-        SaveHandler saveHandler = new SaveHandler();
-		try {
-			saveHandler.loadUserData("UserData", UserProfile.Users);
-			System.out.println(UserProfile.Users.toString());
-			saveHandler.loadToOuterMap("UserGrades", UserProfile.outerMap);
-			System.out.println(UserProfile.userProfiles.toString());
-		} catch (Exception e) {
-			loggedInText.setText("Something went wrong loading data!");
-		}
-		
-		if(loggedInUser != null) {
-			loggedInText.setText("Velkommen " + loggedInUser);
-			usernameInput.setText(loggedInUser);
-		}
-
-			System.out.println(UserProfile.userProfiles);
-			for(int i = 0; i<UserProfile.userProfiles.size(); i++) {
-				UserProfile userProfile = (UserProfile) UserProfile.userProfiles.get(i);
-				System.out.println(userProfile.getUsernameInput() + " har hashmap: " + userProfile.getUserGrades());
-			}
-/*/
+    private void initialize(){
+        loginButton.setOnAction(event -> loginPerson());
+        registerButton.setOnAction(event -> registerPerson()); 
     }
-
-    public void test() {
-        changeScene("Calculator.fxml");
-
-    }
-
-    public void handleButtonClick(){
-        System.out.println("");
-    }
-
     
+    
+    private void registerPerson(){
 
-    /*/
+        String userName = usernameInput.getText(); 
 
-    for (String string : args) {
-        try{
-            Course course = new Course(courseName, extraPoints)
+        try { 
+            if (!userName.equals(null) & userName.matches("[a-zA-Z]*$") & !userFile.checkIfFileLineEquals("src/users.txt", userName) ){ // hvis fil ikke inneholder username
+                latestUsersFile.addUserToFile("src/latestUsers.txt", userName);
+                userFile.addUserToFile("src/users.txt", userName); 
+                changeScene("Calculator.fxml");
+            
+        } else{
+            showErrorMessage("Check this: username cannot contain anything but letters or this username might already excist! Choose another name only containing letters!");
         }
-            catch {
-                Course course = new Course(courseName)
-            }
-
-        }
-        /*/
+    }   catch (IOException e) {
+            showErrorMessage("errorMessage"); 
         
+        }
+ 
+    }
+    
+    private void showErrorMessage(String errorMessage) {
+        Alert alert = new Alert(AlertType.ERROR);
+        alert.setTitle("Error");
+        alert.setHeaderText("An Error has ocurred");
+        alert.setContentText(errorMessage);
+        alert.showAndWait();
+    }
+
+    
+    
+    private void loginPerson() {
+        String userName = usernameInput.getText(); 
+        try {
+            if (userFile.checkIfFileLineEquals("src/users.txt", userName)){
+                latestUsersFile.addUserToFile("src/latestUsers.txt", userName);
+                changeScene("Calculator.fxml");
+            }else{
+                showErrorMessage("This username does not exist! Register user!");
+            }
+        } catch (IOException e) {
+            // TODO Auto-generated catch block
+            e.printStackTrace();
+        }
+    }
+
+
+    
 }

@@ -1,0 +1,7 @@
+
+ida%2000%0.2
+-Entreprenørskap og bedriftsutvikling$4$0$0.0-Engelsk$4$0$0.0-Matematikk P2$4$0$0.0-Matematikk P1$4$0$0.0-Matematikk R2$4$0$0.1-Matematikk R1$4$0$0.05-Samfunnskunnskap$4$0$0.0-Religion og etikk$4$0$0.0-Biologi 1$4$0$0.05-Sosiologi og sosialantropologi$4$4$0.0
+emma%2000%0.1
+-Historie$3$0$0.0
+kristoffer%1999 eller eldre%0.2
+-Kjemi 2$4$0$0.05-Kjemi 1$4$0$0.05-Informasjonsteknologi 2$4$0$0.05-Informasjonsteknologi 1$4$0$0.05-Geofag 2$4$0$0.05-Geofag 1$4$0$0.05-Fysikk 2$4$0$0.1

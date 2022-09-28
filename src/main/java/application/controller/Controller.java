@@ -8,6 +8,7 @@ import javafx.scene.Scene;
 import javafx.stage.Stage;
 
 public abstract class Controller {
+  
   private Stage stage;
 
   public Stage getStage() {
